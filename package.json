@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint --dir src",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,css}'",
-    "preinstall": "lefthook install"
+    "preinstall": "is-git-repository && lefthook install || echo 'Not a git repository, skipping lefthook install'"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.2",
@@ -32,6 +32,7 @@
     "@uploadthing/react": "^6.0.2",
     "arctic": "^0.10.2",
     "dayjs": "^1.11.10",
+    "is-git-repository": "^2.0.0",
     "lucia": "3.0.0-beta.13",
     "lucide-react": "^0.341.0",
     "nanoid": "^5.0.4",
